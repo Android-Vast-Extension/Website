@@ -3,7 +3,7 @@ site_name: VastUtils
 
 site_url: https://github.com/SakurajimaMaii/VastUtilsDocs/
 
-repo_name: MkDocs-Material-Template
+repo_name: VastUtils
 repo_url: https://github.com/SakurajimaMaii/VastUtilsDocs
 
 edit_uri: blob/main/docs/
