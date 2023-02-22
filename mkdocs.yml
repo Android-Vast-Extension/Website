@@ -1,10 +1,10 @@
 # 你的网站名
-site_name: MkDocs基于Material的模板网站
+site_name: VastUtils
 
-site_url: https://github.com/SakurajimaMaii/MkDocs-Material-Template/
+site_url: https://github.com/SakurajimaMaii/VastUtilsDocs/
 
 repo_name: MkDocs-Material-Template
-repo_url: https://github.com/SakurajimaMaii/MkDocs-Material-Template
+repo_url: https://github.com/SakurajimaMaii/VastUtilsDocs
 
 edit_uri: blob/main/docs/
 
@@ -35,6 +35,36 @@ copyright: This website follows MIT
 
 # 插件
 plugins:
+  - i18n:
+      default_language: zh
+      material_alternate: true
+      languages:
+        zh:
+          name: 简体中文
+          build: true
+        en:
+          name: English
+          build: true
+      nav_translations:
+        zh:
+          App data and files : 应用数据与文件
+          App entry points : 应用入口点
+          App resources : 应用资源
+          Architecture components : 架构组件
+          Connectivity : 连接性
+          Core topics : 核心主题
+          Debug : 调试
+          Documents : 文档
+          Extension : 拓展
+          Images : 图像
+          Information get : 信息获取
+          Init : 初始化
+          Lifecycle aware components : 生命周期感知型组件
+          Ui : 界面
+          Ui layer libraries : 界面层库
+          View bind : 视图绑定
+        en:
+          前言 : Preface
   - search:
       lang: ja
   - awesome-pages:
@@ -58,6 +88,10 @@ markdown_extensions:
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
 
 extra_javascript:
   - javascripts/mathjax.js

@@ -1,0 +1,10 @@
+nav:
+  - index.md
+  - ToolsConfig.md
+  - LogUtils.md
+  - architecture-components
+  - app-entry-points
+  - core-topics
+  - ...
+
+collapse_single_pages: true
