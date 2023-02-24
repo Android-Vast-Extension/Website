@@ -26,7 +26,7 @@
                 this.name = name;
             }
         }
-        
+
         class Student extends Person{
             protected int grade;
 
@@ -36,9 +36,11 @@
             }
         }
 
-        try {
-            Person person = CastExtension.cast(new Student(1,"李明"));
-        } catch (Exception e) {
-            e.printStackTrace();
+        void main(String[] args) {
+            try {
+                Person person = Cast.cast(new Student(1,"李明"));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
         ```

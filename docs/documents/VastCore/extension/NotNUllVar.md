@@ -9,5 +9,5 @@ private var age by NotNUllVar<Int>()
 `NotNUllVar` 同时提供一个属性 `once` ，如果你希望该变量只能被初始化一次，可以指定 `once` 为 `true`
 
 ```kotlin
-private var age by NotNUllVar<Int>()
+private var age by NotNUllVar<Int>(once = true)
 ```
