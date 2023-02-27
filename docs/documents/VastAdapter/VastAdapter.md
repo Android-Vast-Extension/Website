@@ -160,24 +160,24 @@
 
 === "kotlin"
 
-```kotlin
-class BaseAdapter(
-    private val items: MutableList<AdapterItemWrapper<*>>,
-    factories: MutableList<BaseHolder.HolderFactory>
-) : VastAdapter(items, factories)
-```
+    ```kotlin
+    class BaseAdapter(
+        private val items: MutableList<AdapterItemWrapper<*>>,
+        factories: MutableList<BaseHolder.HolderFactory>
+    ) : VastAdapter(items, factories)
+    ```
 
 === "java"
 
-```java
-public class BaseAdapter extends VastAdapter {
+    ```java
+    public class BaseAdapter extends VastAdapter {
 
-    public BaseAdapter(@NonNull List<AdapterItemWrapper<?>> mDataSource, @NonNull List<BaseHolder.HolderFactory> mFactories) {
-        super(mDataSource, mFactories);
+        public BaseAdapter(@NonNull List<AdapterItemWrapper<?>> mDataSource, @NonNull List<BaseHolder.HolderFactory> mFactories) {
+            super(mDataSource, mFactories);
+        }
+        
     }
-    
-}
-```
+    ```
 
 ### 在 Activity 中使用
 
