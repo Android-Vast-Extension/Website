@@ -3,19 +3,16 @@
 ## 布局使用
 
 ```xml
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<com.ave.vastgui.netstatelayout.view.VastNetStateLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/net_state_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.NetStateActivity">
-    <com.gcode.vastnetstatelayout.view.VastNetStateLayout
-        android:id="@+id/net_state_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <!--页面其他内容-->
-    </com.gcode.vastnetstatelayout.view.VastNetStateLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <!--页面其他内容-->
+
+</com.ave.vastgui.netstatelayout.view.VastNetStateLayout>
 ```
 
 ## 切换页面状态

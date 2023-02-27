@@ -1,4 +1,4 @@
-# VastActivity介绍
+# Activity
 
 `VastActivity` 组件为你提供了开发所必须的 `Activity` 组件。
 
@@ -9,20 +9,18 @@
 下面展示了基本使用
 
 ```kotlin
-class BaseActivity : VastVbVmActivity<ActivityBaseVbBinding, SampleSharedVM>() {
-
+class ExampleActivity : VastVbVmActivity<ActivityExampleBinding, SampleSharedVM>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        mBinding.addOne.setOnClickListener {
-            mViewModel.addOne()
+        getBinding().addOne.setOnClickListener {
+            getViewModel().addOne()
         }
 
-        mViewModel.count.observe(this){
-            mBinding.count.text = it.toString()
+        getViewModel().count.observe(this){
+            getBinding().count.text = it.toString()
         }
     }
-
 }
 ```
 
@@ -33,39 +31,19 @@ class BaseActivity : VastVbVmActivity<ActivityBaseVbBinding, SampleSharedVM>() {
 
 ## 隐藏ActionBar
 
-`enableActionBar` 必须在 `super.onCreate` 前面调用。
+`enableActionBar` 必须在 `super.onCreate` 之后调用。
 
-!!! 隐藏ActionBar
+```kotlin
+class ExampleActivity : VastVbVmActivity<ActivityExampleBinding, SampleSharedVM>() {
 
-    === "Kotlin"
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableActionBar(false) // 不显示ActionBar
+        ... // 其他设置
+    }
 
-        ```kotlin
-        class BaseActivity : VastVbVmActivity<ActivityBaseVbBinding, SampleSharedVM>() {
-
-            override fun onCreate(savedInstanceState: Bundle?) {
-                enableActionBar = false // 不显示ActionBar
-                super.onCreate(savedInstanceState)
-                ... // 其他设置
-            }
-
-        }
-        ```
-
-    === "Java"
-
-        ```java
-        public class BaseActivity extends VastVbVmActivity<ActivityBaseVbBinding, SampleSharedVM> {
-
-            @Override
-            public void onCreate(@Nullable Bundle savedInstanceState) {
-                // 设置支持全面屏
-                setEnableActionBar(true);
-                super.onCreate(savedInstanceState);
-                .. // 其他设置
-            }
-
-        }
-        ```
+}
+```
 
 <figure markdown>
   ![隐藏ActionBar](../../../img/vba_eg_2.jpg){ width="200" }
@@ -74,39 +52,19 @@ class BaseActivity : VastVbVmActivity<ActivityBaseVbBinding, SampleSharedVM>() {
 
 ## 启动全面屏模式
 
-`enableFullScreen` 必须在 `super.onCreate` 前面调用。
+`enableFullScreen` 必须在 `super.onCreate` 之后调用。
 
-!!! 启动全面屏模式
+```kotlin
+class ExampleActivity : VastVbVmActivity<ActivityExampleBinding, SampleSharedVM>() {
 
-    === "Kotlin"
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableFullScreen(false) // 启用全面屏
+        ... // 其他设置
+    }
 
-        ```kotlin
-        class BaseActivity : VastVbVmActivity<ActivityBaseVbBinding, SampleSharedVM>() {
-
-            override fun onCreate(savedInstanceState: Bundle?) {
-                enableFullScreen = true // 启用全面屏
-                super.onCreate(savedInstanceState)
-                ... // 其他设置
-            }
-
-        }
-        ```
-
-    === "Java"
-
-        ```java
-        public class BaseActivity extends VastVbVmActivity<ActivityBaseVbBinding, SampleSharedVM> {
-
-            @Override
-            public void onCreate(@Nullable Bundle savedInstanceState) {
-                // 设置支持全面屏
-                setEnableFullScreen(true);
-                super.onCreate(savedInstanceState);
-                .. // 其他设置
-            }
-
-        }
-        ```
+}
+```
 
 <figure markdown>
   ![使用全面屏](../../../img/vba_eg_3.jpg){ width="200" }
@@ -118,7 +76,11 @@ class BaseActivity : VastVbVmActivity<ActivityBaseVbBinding, SampleSharedVM>() {
 如果 `ViewModel` 含有参数，你应该重写 `createViewModel` 方法。
 
 ```kotlin
-class FragmentsActivity : VastVbVmActivity<ActivityFragmentsBinding,SampleSharedVM>() {
+class ParamVM(val param:String): ViewModel()
+```
+
+```kotlin
+class ThemeActivity : VastVbVmActivity<ActivityThemeBinding, ParamVM>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -126,7 +88,7 @@ class FragmentsActivity : VastVbVmActivity<ActivityFragmentsBinding,SampleShared
     }
 
     override fun createViewModel(modelClass: Class<out ViewModel>): ViewModel {
-        return SampleSharedVM("Activity")
+        return ParamVM("This is a param")
     }
 
 }
@@ -155,7 +117,7 @@ class MainActivity : VastVbActivity<ActivityMainBinding>() {
 你可以通过 `defaultTag` 作为日志的默认TAG，是 `Activity` 的名字。
 
 ```kotlin
-LogUtils.i(defaultTag,this@BaseActivity::class.java.simpleName)
+LogUtils.i(getDefaultTag(),"This is a log.")
 ```
 
 ## Snackbar
@@ -163,7 +125,7 @@ LogUtils.i(defaultTag,this@BaseActivity::class.java.simpleName)
 `VastVbActivity` `VastVbVmActivity` `VastVmActivity` 提供了默认的 `Snacker` 对象 `mSnackbar` 。
 
 ```kotlin
-mSnackbar.setText(ResUtils.getString(R.string.loading_page)).show()
+getSnackbar().setText(ResUtils.getString(R.string.loading_page)).show()
 ```
 
 <figure markdown>
@@ -174,4 +136,4 @@ mSnackbar.setText(ResUtils.getString(R.string.loading_page)).show()
 
 ## Context
 
-你可以通过 `mContext` 对象获取 `Activity` 上下文。
+你可以通过 `getContext()` 对象获取 `Activity` 上下文。

@@ -7,7 +7,7 @@
 - 定义 `BaseActivity`
 
     ```kotlin
-    abstract class BaseActivity<VB : ViewBinding> : AppCompatActivity() {
+    abstract class BaseActivity<VB : ViewBinding, VM : ViewModel> : AppCompatActivity() {
 
         protected val mBinding: VB by lazy {
             reflexViewBinding()
@@ -24,7 +24,7 @@
 - 继承 `BaseActivity`
 
     ```kotlin
-    class IntentActivity : BaseActivity<ActivityIntentBinding>() {
+    class IntentActivity : BaseActivity<ActivityIntentBinding, NetVM>() {
         
     }
     ```

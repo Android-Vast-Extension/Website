@@ -7,12 +7,6 @@ val screenWidth = ScreenSizeUtils.getMobileScreenWidth()
 val screenHeight = ScreenSizeUtils.getMobileScreenHeight()
 ```
 
-```kotlin
-LogUtils.i("VU","$screenWidth $screenHeight")
-
-2022-02-10 21:47:37.265 4463-4463/com.gcode.vastutils I/class (MainActivity.kt:43): method: onCreate() key: VU content: 1080 2340
-```
-
 ## 获取状态栏高度
 
 ```kotlin

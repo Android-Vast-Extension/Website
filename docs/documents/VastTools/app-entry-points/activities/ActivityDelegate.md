@@ -4,7 +4,7 @@
 
 我们知道有时候你的 `Activity` 已经有继承对象，因此对你而言继承 `VastActivity` 组件显然是不合适的，因而你可以使用 `ActivityDelegate` 对象来拓展其功能。
 
-目前有 `ActivityVbDelegate` ， `ActivityVbVmDelegate` 和 `ActivityVmDelegate` 可供使用。
+目前有 `ActivityVbDelegate` ，`ActivityVbVmDelegate` 和 `ActivityVmDelegate` 可供使用。
 
 ## 使用示例
 

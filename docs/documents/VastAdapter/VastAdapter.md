@@ -1,4 +1,4 @@
-# 使用VastAdapter构建适配器
+# VastAdapter
 
 > 如果可以的话，还是推荐使用**VastBindingAdapter**
 
@@ -6,98 +6,95 @@
 
 通过下面的示例，你可以快速的将 `VastAdapter` 运用到你的项目当中
 
-### 实现 VastAdapterItem 接口
+### 创建数据对象
 
-我们以 `AExample` 和 `BExample` 为例:
-
-.. details::AExample
-    :open: true
+=== "kotlin"
 
     ```kotlin
-    class AExample(
-        val data: String,
-        override var vAapClickEventListener: VAapClickEventListener? = null,
-        override var vAdpLongClickEventListener: VAdpLongClickEventListener? = null,
-    ):VastAdapterItem {
-
-        override fun getVAdpItemType(): String {
-            return AExample::class.java.simpleName
-        }
-
-    }
+    data class Picture(val drawable: Int)
     ```
 
-.. details::BExample
+=== "java"
 
     ```java
-    class BExample(
-        val drawable:Int,
-        override var vAapClickEventListener: VAapClickEventListener? = null,
-        override var vAdpLongClickEventListener: VAdpLongClickEventListener? = null
-    ) : VastAdapterItem {
+    public class Person {
+        private String firstName;
+        private String lastName;
 
-        override fun getVAdpItemType(): String {
-            return BExample::class.java.simpleName
-        }
+        ... // 构造函数、get和set方法
 
     }
     ```
 
-### 设置对应的ViewHolder，ViewHolder需要继承自VastAdapterVH
+### 编辑对应的 Layout
 
-.. details::AExample对应的VH
-    :open: true
+=== "Picture 对应的 layout"
 
-    ```kotlin
-    class AViewHolder(itemView: View): VastAdapterVH(itemView) {
-        private val tv:TextView
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        override fun onBindData(item: VastAdapterItem) {
-            super.onBindData(item)
-            tv.text = (item as AExample).data
-        }
-
-        class Factory:BVAdpVHFactory{
-            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VastAdapterVH {
-                return AViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.item_textview,parent,false))
-            }
-
-            override fun getVAdpVHType(): String {
-                return AExample::class.java.simpleName
-            }
-        }
-
-        init {
-            tv = itemView.findViewById(R.id.text)
-        }
-    }
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/picture" />
+    </LinearLayout>
     ```
 
-.. details::BExample对应的VH
+=== "Person 对应的 layout"
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/firstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/lastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+    </LinearLayout>
+    ```
+
+### 实现 ViewHolder
+
+=== "kotlin"
 
     ```kotlin
-    class BViewHolder(itemView: View) : VastAdapterVH(itemView) {
+    class PictureHolder(itemView: View) : BaseHolder(itemView) {
 
         private val iv: ImageView
 
-        override fun onBindData(item: VastAdapterItem) {
-            super.onBindData(item)
-            iv.setImageResource((item as BExample).drawable)
+        override fun onBindData(item: Any) {
+            iv.setImageResource(cast<Picture>(item).drawable)
         }
 
-        class Factory : BVAdpVHFactory {
+        class Factory : HolderFactory {
 
-            override fun onCreateViewHolder(
+            override fun onCreateHolder(
                 parent: ViewGroup,
                 viewType: Int
-            ): VastAdapterVH {
+            ): BaseHolder {
                 val inflater = LayoutInflater.from(parent.context)
                 val itemView: View = inflater.inflate(R.layout.item_imageview, parent, false)
-                return BViewHolder(itemView)
+                return PictureHolder(itemView)
             }
 
-            override fun getVAdpVHType(): String {
-                return BExample::class.java.simpleName
+            override fun getHolderType(): String {
+                return Picture::class.java.simpleName
             }
 
         }
@@ -108,116 +105,280 @@
     }
     ```
 
-### 实现Adapter
+=== "java"
+
+    ```java
+    public class PersonHolder extends BaseHolder {
+
+        private final MaterialTextView firstName;
+        private final MaterialTextView lastName;
+        private View itemView;
+
+        public PersonHolder(@NonNull View itemView) {
+            super(itemView);
+            firstName = itemView.findViewById(R.id.firstName);
+            lastName = itemView.findViewById(R.id.lastName);
+        }
+
+        @Override
+        public void onBindData(@NonNull Object item) {
+            try {
+                Person person = Cast.cast(item);
+                firstName.setText(person.getFirstName());
+                lastName.setText(person.getLastName());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        public final static class Factory implements HolderFactory {
+
+            @NonNull
+            @Override
+            public BaseHolder onCreateHolder(@NonNull ViewGroup parent, int viewType) {
+                return new PersonHolder(
+                        LayoutInflater.from(parent.getContext()).inflate(R.layout.item_textview, parent, false)
+                );
+            }
+
+            @NonNull
+            @Override
+            public String getHolderType() {
+                return Person.class.getSimpleName();
+            }
+
+        }
+
+    }
+    ```
+
+### 实现 Wrapper
+
+具体可以参考 [AdapterItemWrapper](https://ave.entropy2020.cn/documents/VastAdapter/Widget/#adapteritemwrapper)
+
+### 实现 Adapter
+
+=== "kotlin"
 
 ```kotlin
 class BaseAdapter(
-    private val items: MutableList<VastAdapterItem>,
-    factories: MutableList<VastAdapterVH.BVAdpVHFactory>
+    private val items: MutableList<AdapterItemWrapper<*>>,
+    factories: MutableList<BaseHolder.HolderFactory>
 ) : VastAdapter(items, factories)
 ```
 
-### 在Activity中使用
+=== "java"
 
-```kotlin
-// 获取数据源
-private val datas:MutableList<VastAdapterItem> = ArrayList()
+```java
+public class BaseAdapter extends VastAdapter {
 
-for(i in 0..10){
-    datas.add(AExample(i.toString(),null,null))
-    datas.add(BExample(R.drawable.ic_knots,null,null))
+    public BaseAdapter(@NonNull List<AdapterItemWrapper<?>> mDataSource, @NonNull List<BaseHolder.HolderFactory> mFactories) {
+        super(mDataSource, mFactories);
+    }
+    
 }
-
-// 设置给RecyclerView
-adapter = BaseAdapter(datas, mutableListOf(AViewHolder.Factory(), BViewHolder.Factory()))
-
-// dataRv是RecyclerView
-dataRv.adapter = adapter
-dataRv.layoutManager = LinearLayoutManager(this)
 ```
 
-<div align="center"><img src="../assets/images/VastAdapter.gif" width=50%/></div>
+### 在 Activity 中使用
+
+=== "kotlin"
+
+    ```kotlin
+    // 获取数据源
+    private val datas: MutableList<AdapterItemWrapper<*>> = ArrayList()
+
+    for (i in 0..10) {
+        datas.add(PersonWrapper(Person(i.toString(), i.toString())))
+        datas.add(PictureWrapper(Picture(R.drawable.ic_knots), click, longClick))
+    }
+
+    // 设置给RecyclerView
+    adapter = BaseAdapter(datas, mutableListOf(PersonHolder.Factory(), PictureHolder.Factory()))
+
+    // dataRv是RecyclerView
+    dataRv.adapter = adapter
+    dataRv.layoutManager = LinearLayoutManager(this)
+    ```
+
+=== "java"
+
+    ```java
+    private final ArrayList<AdapterItemWrapper<?>> datas = new ArrayList<>();
+
+    for (int i = 0; i < 10; i++) {
+        Picture picture = new Picture(R.drawable.ic_knots);
+        PictureWrapper pictureWrapper = new PictureWrapper(picture,null,null);
+        datas.add(pictureWrapper);
+        Person person = new Person(String.valueOf(i),String.valueOf(i));
+        PersonWrapper personWrapper = new PersonWrapper(person);
+        datas.add(personWrapper);
+    }
+
+    // 设置给RecyclerView
+    adapter = new BaseAdapter(datas, Arrays.asList(new PersonHolder.Factory(),new PictureHolder.Factory()));
+
+    getBinding().dataRv.setAdapter(adapter);
+    getBinding().dataRv.setLayoutManager(new LinearLayoutManager(this));
+    ```
+
+<figure markdown>
+  ![VastAdapter](../VastAdapter/img/vba_1.gif){ width="200" }
+  <figcaption>列表</figcaption>
+</figure>
 
 ## 添加点击（或长按）事件
 
-对于列表来说，点击事件是必不可少的，`VastAdapter` 支持你为列表设置通用点击事件，当然因为你的类实现了 `VastAdapterItem` 接口，因此你也可以单独为其设定点击事件。
+对于列表来说，点击事件是必不可少的，`VastAdapter` 支持你为列表设置通用点击事件。
 
 ### 通用点击事件设置
 
-```kotlin
-adapter.setOnItemClickListener(object :VastAdapter.OnItemClickListener{
-    override fun onItemClick(view: View, position: Int) {
+=== "kotlin"
+
+    ```kotlin
+    adapter.registerClickEvent(object : AdapterClickListener {
+        override fun onItemClick(view: View, pos: Int) {
+            // Something you want to do
+        }
+    })
+    adapter.registerLongClickEvent(object : AdapterLongClickListener {
+        override fun onItemLongClick(view: View, pos: Int): Boolean {
+            // Something you want to do
+            return true
+        }
+    })
+    ```
+
+=== "java"
+
+    ```java
+    adapter.registerClickEvent((view, pos) -> {
         // Something you want to do
-    }
-})
-adapter.setOnItemLongClickListener(object:VastAdapter.OnItemLongClickListener{
-    override fun onItemLongClick(view: View, position: Int): Boolean {
+    });
+    adapter.registerLongClickEvent((view, pos) -> {
         // Something you want to do
-        return true
-    }
-})
-```
+        return true;
+    });
+    ```
 
 ### 设置单独点击事件
 
-注意，如果你为某一项单独定义了点击事件，那么他不再支持通用点击事件。
+!!! warning 
 
-```kotlin
-// 定义点击事件
-private val click = object : VAapClickEventListener {
-    override fun vAapClickEvent(view: View, pos: Int) {
-        showShortMsg("Click event and pos is $pos.")
+    如果你为某一项单独定义了点击事件，那么它不再支持通用点击事件。
+
+=== "kotlin"
+
+    ```kotlin
+    // 定义点击事件
+    val click = object : AdapterClickListener {
+        override fun onItemClick(view: View, pos: Int) {
+            // Something you want to do
+            ToastUtils.showShortMsg("This is a click listener.")
+        }
     }
-}
 
-// 定义长定义事件
-private val longClick = object : VAdpLongClickEventListener {
-    override fun vAdpLongClickEvent(view: View, pos: Int): Boolean {
-        showShortMsg("Long click event and pos is $pos.")
-        return true
+    val longClick = object : AdapterLongClickListener {
+        override fun onItemLongClick(view: View, pos: Int): Boolean {
+            // Something you want to do
+            ToastUtils.showShortMsg("This is a long click listener.")
+            return true
+        }
     }
-}
 
-// 在设置数据源的时候设置
-for(i in 0..10){
-    datas.add(AExample(i.toString(),click,null))
-    datas.add(BExample(R.drawable.ic_knots,null,longClick))
-}
-```
+    // 在设置数据源的时候设置
+    for (i in 0..10) {
+        datas.add(PictureWrapper(Picture(R.drawable.ic_knots), click, longClick))
+    }
+    ```
 
-<div align="center"><img src="../assets/images/VastAdapterClick.gif" width=50%/></div>
+=== "java"
+
+    ```java
+    // 定义点击事件
+    AdapterClickListener click = (view, pos) -> {
+        ToastUtils.showShortMsg("Click event and pos is " + pos);
+    };
+
+    AdapterLongClickListener longClick = (view, pos) -> {
+        ToastUtils.showShortMsg("Long click event and pos is " + pos);
+        return true;
+    };
+
+    // 在设置数据源的时候设置
+    for (int i = 0; i < 10; i++) {
+        Picture picture = new Picture(R.drawable.ic_knots);
+        PictureWrapper pictureWrapper = new PictureWrapper(picture,click,longClick);
+        datas.add(pictureWrapper);
+    }
+    ```
+
+<figure markdown>
+  ![VastBindAdapter](../VastAdapter/img/vba_2.gif){ width="200" }
+  <figcaption>点击事件</figcaption>
+</figure>
 
 ## 添加新的数据类型
 
 如果你想向列表中添加第三种类型的数据，你只需要以下三步：
 
-- 定义新的数据类型，例如**CExample**，并使其实现**VastAdapterItem**接口
+- 定义新的数据类型，例如 **CExample** 。
 
-- 定义**CExample**对应的ViewHolder，例如**CViewHolder**
+- 定义 **CExample** 对应的 ViewHolder ，例如 **CViewHolder** 。
 
-- 将其对应的**Factory**添加到adapter中
+- 将其对应的 **Factory** 添加到adapter中
   
-  ```kotlin
-  adapter = BaseAdapter(datas, mutableListOf(AViewHolder.Factory(), BViewHolder.Factory() ,CViewHolder.Factory()))
-  ```
+=== "kotlin"
+
+    ```kotlin
+    adapter = BaseAdapter(datas, mutableListOf(PersonHolder.Factory(), PictureHolder.Factory(),CViewHolder.Factory()))
+    ```
+
+=== "java"
+
+    ```java
+    adapter = new BaseAdapter(datas, Arrays.asList(new PersonHolder.Factory(),new PictureHolder.Factory(),new CViewHolder.Factory()));
+    ```
 
 ## 为Adapter添加其他功能
 
 下面的示例向你展示了为Adapter增加判断数据源是否为空的功能
 
-```kotlin
-class BaseAdapter(
-    private val items: MutableList<VastAdapterItem>,
-    factories: MutableList<VastAdapterVH.BVAdpVHFactory>
-) : VastAdapter(items, factories) {
+=== "kotlin"
 
-    /**
-     * 如果集合为空（不包含任何元素），则返回true，否则返回false。
-     * @return Boolean
-     */
-    fun isItemEmpty() = items.isEmpty()
-}
-```
+    ```kotlin
+    class BaseAdapter(
+        private val items: MutableList<AdapterItemWrapper<*>>,
+        factories: MutableList<BaseHolder.HolderFactory>
+    ) : VastAdapter(items, factories) {
+
+        /**
+        * 如果集合为空（不包含任何元素），则返回true，否则返回false。
+        * @return Boolean
+        */
+        fun isItemEmpty() = dataSource.isEmpty()
+
+        override fun setVariableId(): Int {
+            return BR.item
+        }
+
+    }
+    ```
+
+=== "java"
+
+    ```java
+    public class BaseAdapter extends VastAdapter {
+
+        public BaseAdapter(@NonNull List<AdapterItemWrapper<?>> mDataSource, @NonNull List<BaseHolder.HolderFactory> mFactories) {
+            super(mDataSource, mFactories);
+        }
+
+        public Boolean isEmpty(){
+            return getDataSource().isEmpty();
+        }
+
+    }
+    ```
 
 当然你也可以参考示例应用
 

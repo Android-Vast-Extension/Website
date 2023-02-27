@@ -7,10 +7,11 @@
 你可以按照下列的方式将 `VastFragmentAdapter` 添加到你的 `Activity` 中:
 
 ```kotlin
-vp2.adapter = 
-    VastFragmentAdapter(this@BaseFragmentActivity,ArrayList<Fragment>().apply {
-        add(OneFragment())
-        add(TwoFragment())
-        add(ThreeFragment())
+vp2.apply {
+    adapter = VastFragmentAdapter(this@FragmentsActivity,ArrayList<Fragment>().apply {
+        add(SampleVbVmFragment())
+        add(SampleVmFragment())
+        add(SampleVbFragment())
     })
+}
 ```

@@ -1,121 +1,38 @@
-# 使用VastBindAdapter构建适配器
+# VastBindAdapter
 
 ## 快速开始
 
 通过下面的示例，你可以快速将 `VastBindAdapter` 运用到你的项目当中。
 
-### 实现 VastBindAdapterItem 接口
+### 创建数据对象
 
-你需要让你列表项实现 `VastBindAdapterItem` 接口， `VastBindAdapterItem` 接口提供了事件点击和获取布局id的功能。
-
-.. tabset::实现 VastBindAdapterItem 接口
-
-    ## Kotlin
+=== "kotlin"
 
     ```kotlin
-    // 在Kotlin中使用
-    class Person(
-        val firstName: String, val lastName: String,
-        override var vbAapClickEventListener: VAapClickEventListener? = null,
-        override var vbAdpLongClickEventListener: VAdpLongClickEventListener? = null,
-    ) :VastBindAdapterItem {
-
-        override fun getVBAdpItemType(): Int {
-            return R.layout.item_bind_textview
-        }
-
-    }
+    data class Picture(val drawable: Int)
     ```
 
-    ## Java
+=== "java"
 
     ```java
-    // 在Java中使用
-    public class Picture implements VastBindAdapterItem {
+    public class Person {
+        private String firstName;
+        private String lastName;
 
-        private int drawable;
-        private VAapClickEventListener clickEventListener;
-        private VAdpLongClickEventListener longClickEventListener;
+        ... // 构造函数、get和set方法
 
-        public Picture(int drawable, VAapClickEventListener clickEventListener, VAdpLongClickEventListener longClickEventListener) {
-            this.drawable = drawable;
-            this.clickEventListener = clickEventListener;
-            this.longClickEventListener = longClickEventListener;
-        }
-
-        public int getDrawable() {
-            return drawable;
-        }
-
-        public void setDrawable(int drawable) {
-            this.drawable = drawable;
-        }
-
-        @Override
-        public int getVBAdpItemType() {
-            return R.layout.item_bind_imageview;
-        }
-
-
-        @Nullable
-        @Override
-        public VAapClickEventListener getVbAapClickEventListener() {
-            return clickEventListener;
-        }
-
-        @Override
-        public void setVbAapClickEventListener(@Nullable VAapClickEventListener value) {
-            clickEventListener = value;
-        }
-
-        @Nullable
-        @Override
-        public VAdpLongClickEventListener getVbAdpLongClickEventListener() {
-            return longClickEventListener;
-        }
-
-        @Override
-        public void setVbAdpLongClickEventListener(@Nullable VAdpLongClickEventListener value) {
-            longClickEventListener = value;
-        }
     }
     ```
 
-### 编辑对应的layout
+### 编辑对应的 Layout
 
-对于同一列表内的元素，当你使用 `data` 标签将他们绑定进对应的布局时，他们的 `name` 字段应该是一样的。
+!!! warning "关于布局内 variable 标签 name 字段的说明"
 
-例如：`Person` 和 `Picture` 在同一列表中，他们的布局文件内 `name` 字段均为 `item` 。
+    对于同一列表内的元素，当你使用 `data` 标签将他们绑定进对应的布局时，他们的 `name` 字段应该是一样的。
 
-.. details::Person对应的layout
+    例如：`Person` 和 `Picture` 在同一列表中，他们的布局文件内 `name` 字段均为 `item` 。
 
-    ```xml
-    <?xml version="1.0" encoding="utf-8"?>
-    <layout>
-        <data>
-            <variable
-                name="item"
-                type="com.gcode.vastutils.basebindadpexample.model.Person" />
-        </data>
-        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@{item.firstName}"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@{item.lastName}"/>
-        </LinearLayout>
-    </layout>
-    ```
-
-.. details::Picture对应的layout
+=== "Picture 对应的 layout"
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -123,33 +40,67 @@
         <data>
             <variable
                 name="item"
-                type="com.gcode.vastutils.basebindadpexample.model.Picture" />
+                type="com.ave.vastgui.app.activity.adpexample.model.Picture" />
         </data>
+
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <ImageView
                 android:id="@+id/item_image"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@{item.drawable}"
+                android:layout_gravity="center_horizontal"
                 android:contentDescription="@string/picture"
-                android:layout_gravity="center_horizontal"/>
+                android:src="@{item.drawable}" />
         </LinearLayout>
     </layout>
     ```
 
-### 实现Adapter
+=== "Person 对应的 layout"
 
-.. tabset::实现 Adapter
-    :id: tabset2
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <layout>
+        <data>
+            <variable
+                name="item"
+                type="com.ave.vastgui.app.activity.adpexample.model.Person" />
+        </data>
 
-    ## Kotlin
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="@{item.firstName}" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:text="@{item.lastName}" />
+        </LinearLayout>
+    </layout>
+    ```
+
+### 实现 Wrapper
+
+具体可以参考 [AdapterItemWrapper](https://ave.entropy2020.cn/documents/VastAdapter/Widget/#adapteritemwrapper)
+
+### 实现 Adapter
+
+=== "kotlin"
 
     ```kotlin
-    class BaseBindingAdapter(
-        dataSource: MutableList<VastBindAdapterItem>,
+    class BaseBindAdapter(
+        dataSource: MutableList<AdapterItemWrapper<*>>,
         mContext: Context
     ) : VastBindAdapter(dataSource, mContext) {
 
@@ -160,14 +111,15 @@
     }
     ```
 
-    ## Java
+=== "java"
 
     ```java
     public class BaseBindAdapter extends VastBindAdapter {
 
-        public BaseBindAdapter(@NonNull List<VastBindAdapterItem> dataSource,@NonNull Context mContext) {
-            super(dataSource,mContext);
+        public BindAdapter1(@NonNull List<AdapterItemWrapper<?>> mDataSource, @NonNull Context mContext) {
+            super(mDataSource, mContext);
         }
+
 
         @Override
         public int setVariableId() {
@@ -177,78 +129,79 @@
     }
     ```
 
-### 在Activity中使用
+### 在 Activity 中使用
 
-下面的示例展示了在 Kotlin 和 Java 环境下的使用
 
-.. tabset::在 Activity 中使用
-    :id: tabset3
-
-    ## Kotlin
+=== "kotlin"
 
     ```kotlin
-    private val datas:MutableList<VastBindAdapterItem> = ArrayList()
+    private val datas: MutableList<AdapterItemWrapper<Any>> = ArrayList()
 
-    for(i in 0..10){
-        datas.add(Person(i.toString(),i.toString(),null,null))
-        datas.add(Picture(R.drawable.ic_knots,null,null))
+    for (i in 0..10) {
+        datas.add(PersonWrapper(Person(i.toString(), i.toString())))
+        datas.add(PictureWrapper(Picture(R.drawable.ic_knots), click, longClick))
     }
 
     // 设置给RecyclerView
-    val adapter = BaseBindingAdapter(datas, this)
+    val adapter = BaseBindAdapter(datas, this)
     dataRv.adapter = adapter
     dataRv.layoutManager = LinearLayoutManager(this)
     ```
 
-    ## Java
+=== "java"
 
     ```java
-    private ArrayList<VastBindAdapterItem> datas = new ArrayList<>();
+    private final ArrayList<AdapterItemWrapper<?>> datas = new ArrayList<>();
 
     for (int i = 0; i < 10; i++) {
-        datas.add(new Picture(R.drawable.ic_knots, null, null));
+        Picture picture = new Picture(R.drawable.ic_knots);
+        PictureWrapper pictureWrapper = new PictureWrapper(picture,null,null);
+        datas.add(pictureWrapper);
+        Person person = new Person(String.valueOf(i),String.valueOf(i));
+        PersonWrapper personWrapper = new PersonWrapper(person);
+        datas.add(personWrapper);
     }
 
     // 设置给RecyclerView
     BaseBindAdapter adapter = new BaseBindAdapter(datas, this);
-    dataRv.setAdapter(adapter);
-    dataRv.setLayoutManager(new LinearLayoutManager(this));
+    getBinding().dataRv.setAdapter(adapter);
+    getBinding().dataRv.setLayoutManager(new LinearLayoutManager(this));
     ```
 
-<div align="center"><img src="../assets/images/VastAdapter.gif" width=50%/></div>
+<figure markdown>
+  ![VastBindAdapter](../VastAdapter/img/vba_1.gif){ width="200" }
+  <figcaption>列表</figcaption>
+</figure>
 
 ## 添加点击（或长按）事件
 
-对于列表来说，点击事件是必不可少的，`VastBindAdapter` 支持你为列表设置通用点击事件，当然因为你的类实现了 `VastBindAdapterItem` 接口，因此你也可以单独为其设定点击事件。
+对于列表来说，点击事件是必不可少的，`VastBindAdapter` 支持你为列表设置通用点击事件。
 
 ### 通用点击事件设置
 
-.. tabset::通用点击事件设置
-    :id: tabset4
-
-    ## Kotlin
+=== "kotlin"
 
     ```kotlin
-    adapter.setOnItemClickListener(object : VastBindAdapter.OnItemClickListener {
-        override fun onItemClick(view: View, position: Int) {
+    adapter.registerClickEvent(object : AdapterClickListener {
+        override fun onItemClick(view: View, pos: Int) {
             // Something you want to do
         }
     })
-    adapter.setOnItemLongClickListener(object : VastBindAdapter.OnItemLongClickListener {
-        override fun onItemLongClick(view: View, position: Int): Boolean {
+    adapter.registerLongClickEvent(object : AdapterLongClickListener {
+        override fun onItemLongClick(view: View, pos: Int): Boolean {
             // Something you want to do
             return true
         }
     })
     ```
 
-    ## Java
+=== "java"
 
     ```java
-    adapter.setOnItemClickListener((view, position) -> {
+    adapter.registerClickEvent((view, pos) -> {
         // Something you want to do
     });
-    adapter.setOnItemLongClickListener((view, position) -> {
+    adapter.registerLongClickEvent((view, pos) -> {
         // Something you want to do
         return true;
     });
@@ -256,68 +209,71 @@
 
 ### 设置单独点击事件
 
-注意，如果你为某一项单独定义了点击事件，那么它不再支持通用点击事件。
+!!! warning 
 
-.. tabset::设置单独点击事件
-    :id: tabset5
+    如果你为某一项单独定义了点击事件，那么它不再支持通用点击事件。
 
-    ## Kotlin
+
+=== "kotlin"
 
     ```kotlin
     // 定义点击事件
-    val click = object : VAapClickEventListener {
-        override fun vAapClickEvent(view: View, pos: Int) {
-            showShortMsg("Click event and pos is $pos.")
+    val click = object : AdapterClickListener {
+        override fun onItemClick(view: View, pos: Int) {
+            // Something you want to do
+            ToastUtils.showShortMsg("This is a click listener.")
         }
     }
 
-    val longClick = object : VAdpLongClickEventListener {
-        override fun vAdpLongClickEvent(view: View, pos: Int): Boolean {
-            showShortMsg("Long click event and pos is $pos.")
+    val longClick = object : AdapterLongClickListener {
+        override fun onItemLongClick(view: View, pos: Int): Boolean {
+            // Something you want to do
+            ToastUtils.showShortMsg("This is a long click listener.")
             return true
         }
     }
 
     // 在设置数据源的时候设置
-    for(i in 0..10){
-        datas.add(Person(i.toString(),i.toString(),click,null))
-        datas.add(Picture(R.drawable.ic_knots,null,longClick))
+    for (i in 0..10) {
+        datas.add(PictureWrapper(Picture(R.drawable.ic_knots), click, longClick))
     }
     ```
 
-    ## Java
+=== "java"
 
     ```java
     // 定义点击事件
-    VAapClickEventListener click = (view, pos) -> {
-        ToastUtils.showShortMsg(this, "Click event and pos is " + pos);
+    AdapterClickListener click = (view, pos) -> {
+        ToastUtils.showShortMsg("Click event and pos is " + pos);
     };
 
-    VAdpLongClickEventListener longClick = (view, pos) -> {
-        ToastUtils.showShortMsg(this, "Long click event and pos is " + pos);
+    AdapterLongClickListener longClick = (view, pos) -> {
+        ToastUtils.showShortMsg("Long click event and pos is " + pos);
         return true;
     };
 
     // 在设置数据源的时候设置
     for (int i = 0; i < 10; i++) {
-        datas.add(new Picture(R.drawable.ic_knots, click, longClick));
+        Picture picture = new Picture(R.drawable.ic_knots);
+        PictureWrapper pictureWrapper = new PictureWrapper(picture,click,longClick);
+        datas.add(pictureWrapper);
     }
     ```
 
-<div align="center"><img src="../assets/images/VastAdapterClick.gif" width=50%/></div>
+<figure markdown>
+  ![VastBindAdapter](../VastAdapter/img/vba_2.gif){ width="200" }
+  <figcaption>点击事件</figcaption>
+</figure>
 
 ## 为Adapter添加其他功能
 
 下面的示例向你展示了为Adapter增加判断数据源是否为空的功能
 
-.. tabset::设置单独点击事件
-    :id: tabset6
-
-    ## Kotlin
+=== "kotlin"
 
     ```kotlin
-    class BaseBindingAdapter(
-        dataSource: MutableList<VastBindAdapterItem>,
+    class BaseBindAdapter(
+        dataSource: MutableList<AdapterItemWrapper<*>>,
         mContext: Context
     ) : VastBindAdapter(dataSource, mContext) {
 
@@ -334,13 +290,13 @@
     }
     ```
 
-    ## Java
+=== "java"
 
     ```java
     public class BaseBindAdapter extends VastBindAdapter {
 
-        public BaseBindAdapter(@NonNull List<VastBindAdapterItem> dataSource,@NonNull Context mContext) {
-            super(dataSource,mContext);
+        public BindAdapter1(@NonNull List<AdapterItemWrapper<?>> mDataSource, @NonNull Context mContext) {
+            super(mDataSource, mContext);
         }
 
         @Override
@@ -363,14 +319,11 @@
 
 当然，如果你想了解更多，你可以点击[绑定适配器](https://developer.android.google.cn/topic/libraries/data-binding/binding-adapters)了解更多。
 
-.. tabset::设置单独点击事件
-    :id: tabset7
-
-    ## Kotlin
+=== "kotlin"
 
     ```kotlin
-    class BaseBindingAdapter(
-        dataSource: MutableList<VastBindAdapterItem>,
+    class BaseBindAdapter(
+        dataSource: MutableList<AdapterItemWrapper<*>>,
         mContext: Context
     ) : VastBindAdapter(dataSource, mContext) {
 
@@ -392,19 +345,19 @@
     }
     ```
 
-    ## Java
+=== "java"
 
     ```java
     public class BaseBindAdapter extends VastBindAdapter {
+
+        public BindAdapter1(@NonNull List<AdapterItemWrapper<?>> mDataSource, @NonNull Context mContext) {
+            super(mDataSource, mContext);
+        }
 
         @BindingAdapter("drawableStartCompat")
         public static void loadImage(TextView tv, int resId) {
             Drawable drawable = ResourcesCompat.getDrawable(App.context.getResources(),resId,null);
             tv.setCompoundDrawablesWithIntrinsicBounds(drawable,null,null,null);
-        }
-        
-        public BaseBindAdapter(@NonNull List<VastBindAdapterItem> dataSource,@NonNull Context mContext) {
-            super(dataSource,mContext);
         }
 
         @Override

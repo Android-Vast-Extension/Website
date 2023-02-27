@@ -29,6 +29,7 @@ theme:
     - navigation.tabs.sticky
     # https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/?h=edit#code-actions
     - content.action.edit
+    - content.tabs.link
 
 # 版权
 copyright: This website follows MIT
@@ -60,11 +61,19 @@ plugins:
           Information get : 信息获取
           Init : 初始化
           Lifecycle aware components : 生命周期感知型组件
+          Performing network operations : 执行网络操作
           Ui : 界面
           Ui layer libraries : 界面层库
           View bind : 视图绑定
         en:
           前言 : Preface
+          概览 : Introduction
+          初始化 : Initialization
+          日志 : Logcat
+          广播 : Broadcast
+          GPS状态 : GPS
+          Class转换为Map : Class to Map
+          常见Intent : Normal Intent
   - search:
       lang: ja
   - awesome-pages:

@@ -52,3 +52,7 @@ LogUtils.i("VU", deviceBrand)
 ```kotlin
 2022-02-10 22:17:47.494 6086-6086/com.gcode.vastutils I/class (MainActivity.kt:52): Redmi
 ```
+
+```kotlin
+LogUtils.i("VU", SystemUtils.getAvailableMemory().toString())
+```

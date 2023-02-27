@@ -1,13 +1,13 @@
 # 带状态的可绘制资源
 
-`ShapeAndStateUtils` 是对 [GradientDrawable](https://developer.android.google.cn/reference/android/graphics/drawable/GradientDrawable?hl=en) 进行了封装。
+`ShapeAndStateDrawable` 是对 [GradientDrawable](https://developer.android.google.cn/reference/android/graphics/drawable/GradientDrawable?hl=en) 进行了封装。
 
 ## 快速开始
 
-下面的示例为你演示了 `ShapeAndStateUtils` 的基础使用
+下面的示例为你演示了 `ShapeAndStateDrawable` 的基础使用
 
 ```kotlin
-val btnbk1 = ShapeAndStateUtils.create()
+val btnbk1 = ShapeAndStateDrawable.create()
             .setShape(RECTANGLE)
             .setRadius(50f)
             .setBkColor(getColor(R.color.teal_200))
@@ -16,7 +16,10 @@ val btnbk1 = ShapeAndStateUtils.create()
 mBinding.btn1.background = btnbk1
 ```
 
-<div align="center"><img src="../assets/images/shape_eg_1.jpg"/></div>
+<figure markdown>
+  ![ShapeAndStateDrawable](../../../img/shape_eg_1.jpg){ width="300" }
+  <figcaption>基础示例</figcaption>
+</figure>
 
 ## 设置形状
 
@@ -24,7 +27,7 @@ mBinding.btn1.background = btnbk1
 `RECTANGLE` ， `OVAL` ， `LINE` ， `RING`四种形状
 
 ```kotlin
-val btnbk1 = ShapeAndStateUtils.create()
+val btnbk1 = ShapeAndStateDrawable.create()
             .setShape(OVAL)
             .build()
 ```
@@ -35,49 +38,55 @@ val btnbk1 = ShapeAndStateUtils.create()
 
 ```kotlin
 // 设置四个圆角，半径均为50.0
-val btnbk1 = ShapeAndStateUtils.create()
+val btnbk1 = ShapeAndStateDrawable.create()
             .setShape(RECTANGLE)
             .setRadius(50f)
             .build()
 
 // 设置四个大小不同的圆角
-val btnbk2 = ShapeAndStateUtils.create()
+val btnbk2 = ShapeAndStateDrawable.create()
             .setShape(RECTANGLE)
             .setRadius(0f,0f,50f,50f)
             .build()
 ```
 
-<div align="center"><img src="../assets/images/shape_eg_2.jpg"/></div>
+<figure markdown>
+  ![ShapeAndStateDrawable](../../../img/shape_eg_2.jpg){ width="300" }
+  <figcaption>设置圆角</figcaption>
+</figure>
 
 ## 设置渐变
 
-`ShapeAndStateUtils` 目前支持两种渐变颜色形式
+`ShapeAndStateDrawable` 目前支持两种渐变颜色形式
 
 - startColor->endColor
 - startColor->centerColor->endColor
 
 ```kotlin
 // startColor->centerColor->endColor
-val btnbk1 = ShapeAndStateUtils.create()
+val btnbk1 = ShapeAndStateDrawable.create()
             .setShape(RECTANGLE)
             .setRadius(50f)
             .setGradient(45, colorHex2Int("#12c2e9"),colorHex2Int("#c471ed"),colorHex2Int("#f64f59"))
             .build()
 
 // startColor->endColor
-val btnbk2 = ShapeAndStateUtils.create()
+val btnbk2 = ShapeAndStateDrawable.create()
             .setShape(RECTANGLE)
             .setRadius(50f)
             .setGradient(45, colorHex2Int("#0F2027"),colorHex2Int("#78ffd6"))
             .build()
 ```
 
-<div align="center"><img src="../assets/images/shape_eg_3.jpg"/></div>
+<figure markdown>
+  ![ShapeAndStateDrawable](../../../img/shape_eg_3.jpg){ width="300" }
+  <figcaption>设置渐变</figcaption>
+</figure>
 
 ## 添加边框
 
 ```kotlin
-val btnbk1 = ShapeAndStateUtils.create()
+val btnbk1 = ShapeAndStateDrawable.create()
             .setShape(RECTANGLE)
             .setRadius(50f)
             .setGradient(45, colorHex2Int("#12c2e9"),colorHex2Int("#c471ed"),colorHex2Int("#f64f59"))
@@ -85,13 +94,16 @@ val btnbk1 = ShapeAndStateUtils.create()
             .build()
 ```
 
-<div align="center"><img src="../assets/images/shape_eg_4.jpg"/></div>
+<figure markdown>
+  ![ShapeAndStateDrawable](../../../img/shape_eg_4.jpg){ width="300" }
+  <figcaption>添加边框</figcaption>
+</figure>
 
-以上便是 `ShapeAndStateUtils` 的基础使用
+以上便是 `ShapeAndStateDrawable` 的基础使用
 
 ## 定义不同状态下的颜色
 
-我们知道有时候对于控件的不同状态，我们希望其呈现不同的颜色，当然 `ShapeAndStateUtils` 为你提供了 `setBgColorStateList` 和 `setStrokeColorStateList` 方法来帮助你实现此功能，以下为示例
+我们知道有时候对于控件的不同状态，我们希望其呈现不同的颜色，当然 `ShapeAndStateDrawable` 为你提供了 `setBgColorStateList` 和 `setStrokeColorStateList` 方法来帮助你实现此功能，以下为示例
 
 ```kotlin
 // 定义状态
@@ -114,7 +126,7 @@ val colorList = IntArray(6).apply {
         set(5, colorHex2Int("#0575E6"))
 }
 
-val btnbk1 = ShapeAndStateUtils.create()
+val btnbk1 = ShapeAndStateDrawable.create()
             .setShape(RECTANGLE)
             .setRadius(50f)
             .setStroke(15f, colorHex2Int("#3E5151"))
@@ -122,4 +134,8 @@ val btnbk1 = ShapeAndStateUtils.create()
             .build()
 ```
 
-<div align="center"><img src="../assets/images/shape_eg_5.gif" width=50%/></div>
+<figure markdown>
+  ![ShapeAndStateDrawable](../../../img/shape_eg_5.gif){ width="300" }
+  <figcaption>定义不同状态下的颜色</figcaption>
+</figure>
+

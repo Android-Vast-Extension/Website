@@ -1,4 +1,4 @@
-# ViewModel拓展
+# ViewModel
 
 ## 使用示例
 
@@ -7,10 +7,10 @@
 - 定义 `BaseActivity`
 
     ```kotlin
-    abstract class BaseActivity<VM : ViewModel> : AppCompatActivity() {
+    abstract class BaseActivity<VB : ViewBinding, VM : ViewModel> : AppCompatActivity() {
 
         protected val mViewModel: VM by lazy {
-            reflexViewModel{
+            reflexViewModel {
                 return@reflexViewModel getViewModel()
             }
         }
@@ -23,9 +23,9 @@
 - 继承 `BaseActivity`
 
     ```kotlin
-    class IntentActivity : BaseActivity<BasicViewModel>() {
+    class IntentActivity : BaseActivity<ActivityIntentBinding, NetVM>() {
 
-        override fun getViewModel(): BasicViewModel = BasicViewModel(NetworkRepository())
+            override fun getViewModel(): NetVM = NetVM(NetworkRepository())
         
     }
     ```

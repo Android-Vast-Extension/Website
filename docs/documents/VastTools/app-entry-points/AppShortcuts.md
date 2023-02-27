@@ -5,17 +5,20 @@
 下面的示例向你展示了如何创建一个应用快捷方式
 
 ```kotlin
-AppShortcutsUtils.createShortCut(
+AppShortcutsUtils.createPinnedShortcut(
     MainActivity::class.java,
     "987654321",
     R.mipmap.ic_launcher,
     "测试快捷方式",
+    this
 )
 ```
 
-## 为快捷方式设置resultIntent
+## 为快捷方式设置 resultIntent
 
-> Android版本要求在26以上
+!!! warning 
+    
+    Android版本要求在26以上
 
 ### 创建广播接收者
 

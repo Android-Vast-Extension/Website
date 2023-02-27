@@ -12,12 +12,12 @@
 ### xml使用
 
 ```xml
-<com.gcode.vasttools.view.DownloadCircleView
-        android:id="@+id/downloadCv"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:progress_background_width="20dp"
-        app:progress_text_size="12sp"/>
+<com.ave.vastgui.tools.view.downloadcircle.DownloadCircleView
+    android:id="@+id/downloadCv"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    app:progress_background_width="20dp"
+    app:progress_text_size="12sp"/>
 ```
 
 ### 属性设置
@@ -35,12 +35,16 @@
 
 ```kotlin
 // Here is an example
-downloadCv.apply {
-    setProgressShader(LinearGradient(-700f, 0f, 700f, 0f,
-        colors,pos,
-        Shader.TileMode.CLAMP))
+getBinding().downloadCv.apply {
+    setProgressShader(
+        LinearGradient(
+            -700f, 0f, 700f, 0f,
+            colors, pos,
+            Shader.TileMode.CLAMP
+        )
+    )
     setProgressStrokeCap(Paint.Cap.ROUND)
-    setProgressEndColor(colorHex2Int("#4286f4"))
+    setProgressEndColor(ColorUtils.colorHex2Int("#4286f4"))
     setProgressStartAndEndEnabled(false)
 }
 ```

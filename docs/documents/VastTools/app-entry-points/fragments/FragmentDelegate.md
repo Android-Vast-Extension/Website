@@ -37,7 +37,6 @@ class SampleVmFragment : Fragment() {
     private lateinit var count: MaterialTextView
     private var mFragmentDelegate by NotNUllVar<FVD>()
 
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -53,7 +52,7 @@ class SampleVmFragment : Fragment() {
         tv = view.findViewById(R.id.tv)
         count = view.findViewById(R.id.count)
 
-        tv.text = mFragmentDelegate.getViewModel().tag
+        tv.text = "Hello"
 
         mFragmentDelegate.getViewModel().count.observe(requireActivity()) {
             count.text = it.toString()

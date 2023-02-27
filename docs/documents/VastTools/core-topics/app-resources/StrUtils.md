@@ -21,6 +21,7 @@ LogUtils.i(defaultTag,StrUtils.strConcat("1","2","3"))
 | 千米/时 | 2km/h |
 | 千米 | 2km |
 | 米 | 2m |
+| 米/秒 | 2m/s |
 | 百分比 | 77％ |
 
 ```kotlin

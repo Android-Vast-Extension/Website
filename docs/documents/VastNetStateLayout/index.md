@@ -1,6 +1,4 @@
-# 介绍
-
-## 概览
+# 概览
 
 VastNetStateLayout继承自framelayout。你可以自定义下列状态页面: loading,error,ok,empty data.
 

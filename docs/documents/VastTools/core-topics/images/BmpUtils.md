@@ -14,7 +14,10 @@
 iv.setImageBitmap(mergeBmp(getAppBitmap(this)!!,bitmap))
 ```
 
-<div align="center"><img src="../assets/images/mergeBmp.png" width="40%"></div>
+<figure markdown>
+  ![位图合并](../../../img/mergeBmp.png){ width="200" }
+  <figcaption>位图合并</figcaption>
+</figure>
 
 ### 把两个位图覆盖合成为一个位图，左右拼接
 
@@ -24,7 +27,10 @@ iv.setImageBitmap(mergeBmp(getAppBitmap(this)!!,bitmap))
 iv.setImageBitmap(mergeBmpLR(getAppBitmap(this)!!,getAppBitmap(this)!!,true))
 ```
 
-<div align="center"><img src="../assets/images/mergeBmpLR.png" width="40%"></div>
+<figure markdown>
+  ![位图合并](../../../img/mergeBmpLR.png){ width="200" }
+  <figcaption>位图合并</figcaption>
+</figure>
 
 ### 把两个位图覆盖合成为一个位图，上下拼接
 
@@ -34,7 +40,10 @@ iv.setImageBitmap(mergeBmpLR(getAppBitmap(this)!!,getAppBitmap(this)!!,true))
 iv.setImageBitmap(mergeBmpTB(getAppBitmap(this)!!,getAppBitmap(this)!!,true))
 ```
 
-<div align="center"><img src="../assets/images/mergeBmpTB.png" width="40%"></div>
+<figure markdown>
+  ![位图合并](../../../img/mergeBmpTB.png){ width="200" }
+  <figcaption>位图合并</figcaption>
+</figure>
 
 ## 通过Base64获取位图
 

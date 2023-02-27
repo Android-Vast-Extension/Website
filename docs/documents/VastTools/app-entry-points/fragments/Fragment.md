@@ -1,4 +1,4 @@
-# VastFragment
+# Fragment
 
 `VastFragment` 是基于 [Fragment](https://developer.android.com/reference/androidx/fragment/app/Fragment.html) 进行封装的。
 
@@ -10,9 +10,9 @@
 class SampleVbVmFragment : VastVbVmFragment<FragmentSampleVbVmBinding, SampleSharedVM>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view,savedInstanceState)
+        super.onViewCreated(view, savedInstanceState)
 
-        mBinding.tv.setOnClickListener {
+        getBinding().addOne.setOnClickListener {
             ... //click event
         }
     }
@@ -40,10 +40,10 @@ class SampleVmFragment(override val layoutId: Int = R.layout.fragment_sample_vm)
 
 ```kotlin
 class SampleVbVmFragment : VastVbVmFragment<FragmentSampleVbVmBinding, SampleSharedVM>() {
-    
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+        ...
     }
 
     override fun createViewModel(modelClass: Class<out ViewModel>): ViewModel {
@@ -66,20 +66,5 @@ override fun setVmBySelf(): Boolean = false
 你可以通过 `defaultTag` 作为日志的默认TAG，是 `Activity` 的名字。
 
 ```kotlin
-LogUtils.i(defaultTag,this@SampleVbVmFragment::class.java.simpleName)
-```
-
-## DialogFragment
-
-如果你使用 `DialogFragment` ，请参考:
-
-```kotlin
-class SampleDialogFragment : VastVbVmDialogFragment<FragmentSampleDialogBinding, BasicViewModel>() {
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        ... // do something
-    }
-
-}
+LogUtils.i(getDefaultTag(), this@SampleVbVmFragment::class.java.simpleName)
 ```

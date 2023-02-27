@@ -78,16 +78,3 @@ Log.i("VU",AppUtils.getAppDebug().toString())
 // iv是一个imageView控件
 iv.setImageBitmap(AppUtils.getAppBitmap())
 ```
-
-## build.gradle配置
-
-```groovy
-defaultConfig {
-  applicationId "com.gcode.vastutils"
-  ... //sdk version
-  versionCode 1
-  versionName "1.0"
-
-  testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-}
-```
