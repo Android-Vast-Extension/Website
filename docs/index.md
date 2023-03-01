@@ -8,6 +8,10 @@
 
 ## 快速使用
 
+!!! danger "关于 Android-Vast-Extension 的说明"
+
+    因为最近存在重大更新，所以推荐直接使用源代码进行构建，生成 `aar` 文件来使用。
+
 ### VastNetStateLayout
 
 一款支持自定义网络状态的布局控件
