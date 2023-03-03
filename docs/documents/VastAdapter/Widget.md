@@ -2,6 +2,45 @@
 
 本文介绍了与适配器有关的一些组件
 
+## AdapterDiffUtil 
+
+该组件主要用来替代 `DiffUtil.ItemCallback`
+
+=== "kotlin"
+
+    ```kotlin
+    class PictureDiffUtil : AdapterDiffUtil<Picture, PictureWrapper>() {
+        override fun newAreItemsTheSame(oldItem: Picture, newItem: Picture): Boolean {
+            return oldItem.drawable == newItem.drawable
+        }
+
+        override fun newAreContentsTheSame(oldItem: Picture, newItem: Picture): Boolean {
+            return oldItem.drawable == newItem.drawable
+        }
+    }
+    ```
+
+=== "java"
+
+    ```kotlin
+    public class PersonDiffUtil extends AdapterDiffUtil<Person, PersonWrapper> {
+
+        public PersonDiffUtil() {
+        }
+
+        @Override
+        public boolean newAreContentsTheSame(Person oldItem, Person newItem) {
+            return Objects.equals(oldItem.getFirstName(), newItem.getFirstName()) && Objects.equals(oldItem.getLastName(), newItem.getLastName());
+        }
+
+        @Override
+        public boolean newAreItemsTheSame(Person oldItem, Person newItem) {
+            return Objects.equals(oldItem.getFirstName(), newItem.getFirstName()) && Objects.equals(oldItem.getLastName(), newItem.getLastName());
+        }
+
+    }
+    ```
+
 ## AdapterItemWrapper
 
 该组件主要用来实现以下功能
