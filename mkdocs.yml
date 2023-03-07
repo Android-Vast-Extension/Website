@@ -65,6 +65,7 @@ plugins:
           Images : 图像
           Information get : 信息获取
           Init : 初始化
+          License : 许可
           Lifecycle aware components : 生命周期感知型组件
           Performing network operations : 执行网络操作
           Ui : 界面

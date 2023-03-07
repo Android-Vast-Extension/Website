@@ -381,7 +381,3 @@
     ```
 
 当然你也可以参考示例应用
-
-## 引用
-
-BaseVastAdapter部分设计参考自[彻底解耦 RecyclerView.Adapter](https://puke3615.github.io/2018/08/26/Android-RecyclerView-Architecture-Design/)
