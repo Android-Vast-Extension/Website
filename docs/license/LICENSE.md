@@ -24,7 +24,7 @@
         See the License for the specific language governing permissions and
         limitations under the License.
 
-- [Zhuinden/fragmentviewbindingdelegate-kt] : [ACTIVE] A delegate for making managing the ViewBinding variable in a Fragment simpler.
+- [Zhuinden/fragmentviewbindingdelegate-kt](https://github.com/Zhuinden/fragmentviewbindingdelegate-kt) : [ACTIVE] A delegate for making managing the ViewBinding variable in a Fragment simpler.
 
     !!! quote LICENSE
 
@@ -34,7 +34,7 @@
         you may not use this file except in compliance with the License.
         You may obtain a copy of the License at
 
-        http://www.apache.org/licenses/LICENSE-2.0
+            http://www.apache.org/licenses/LICENSE-2.0
 
         Unless required by applicable law or agreed to in writing, software
         distributed under the License is distributed on an "AS IS" BASIS,
