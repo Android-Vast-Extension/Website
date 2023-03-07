@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/Building/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/Building/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/Building/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastAdapter/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastAdapter/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastAdapter/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastAdapter/VastAdapter/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastAdapter/VastAdapter/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastAdapter/VastAdapter/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastAdapter/VastBindAdapter/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastAdapter/VastBindAdapter/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastAdapter/VastBindAdapter/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastAdapter/Widget/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastAdapter/Widget/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastAdapter/Widget/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastCore/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastCore/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastCore/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastCore/extension/Cast/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastCore/extension/Cast/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastCore/extension/Cast/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastCore/extension/DefaultLogTag/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastCore/extension/DefaultLogTag/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastCore/extension/DefaultLogTag/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastCore/extension/NotNUllVar/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastCore/extension/NotNUllVar/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastCore/extension/NotNUllVar/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastCore/extension/Nothing/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastCore/extension/Nothing/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastCore/extension/Nothing/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastNetStateLayout/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastNetStateLayout/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastNetStateLayout/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastNetStateLayout/VastNetStateLayout/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastNetStateLayout/VastNetStateLayout/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastNetStateLayout/VastNetStateLayout/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/LogUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/LogUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/LogUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/ToolsConfig/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/ToolsConfig/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/ToolsConfig/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/app-entry-points/ActivityUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/app-entry-points/ActivityUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/app-entry-points/ActivityUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/app-entry-points/AppShortcuts/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/app-entry-points/AppShortcuts/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/app-entry-points/AppShortcuts/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/app-entry-points/activities/Activity/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/app-entry-points/activities/Activity/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/app-entry-points/activities/Activity/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/app-entry-points/activities/ActivityDelegate/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/app-entry-points/activities/ActivityDelegate/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/app-entry-points/activities/ActivityDelegate/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/app-entry-points/activities/ActivityResult/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/app-entry-points/activities/ActivityResult/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/app-entry-points/activities/ActivityResult/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/app-entry-points/fragments/Fragment/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/app-entry-points/fragments/Fragment/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/app-entry-points/fragments/Fragment/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/app-entry-points/fragments/FragmentDelegate/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/app-entry-points/fragments/FragmentDelegate/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/app-entry-points/fragments/FragmentDelegate/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/architecture-components/ui-layer-libraries/lifecycle-aware-components/Reflex/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/architecture-components/ui-layer-libraries/lifecycle-aware-components/Reflex/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/architecture-components/ui-layer-libraries/lifecycle-aware-components/Reflex/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/architecture-components/ui-layer-libraries/view-bind/Reflex/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/architecture-components/ui-layer-libraries/view-bind/Reflex/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/architecture-components/ui-layer-libraries/view-bind/Reflex/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/ContextHelper/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/ContextHelper/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/ContextHelper/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/DownloadUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/DownloadUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/DownloadUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/EncryptionUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/EncryptionUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/EncryptionUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/IDCardUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/IDCardUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/IDCardUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/IntentUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/IntentUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/IntentUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/app-data-and-files/FileMgr/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/app-data-and-files/FileMgr/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/app-data-and-files/FileMgr/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/app-data-and-files/ImageMgr/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/app-data-and-files/ImageMgr/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/app-data-and-files/ImageMgr/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/app-data-and-files/UriUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/app-data-and-files/UriUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/app-data-and-files/UriUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/app-resources/ColorUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/app-resources/ColorUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/app-resources/ColorUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/app-resources/DensityUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/app-resources/DensityUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/app-resources/DensityUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/app-resources/RegexUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/app-resources/RegexUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/app-resources/RegexUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/app-resources/ResUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/app-resources/ResUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/app-resources/ResUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/app-resources/SpanUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/app-resources/SpanUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/app-resources/SpanUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/app-resources/StrUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/app-resources/StrUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/app-resources/StrUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/background-tasks/VastBroadcastReceiver/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/background-tasks/VastBroadcastReceiver/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/background-tasks/VastBroadcastReceiver/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/bean/Bean/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/bean/Bean/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/bean/Bean/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/bean/Component/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/bean/Component/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/bean/Component/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/connectivity/NetStateUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/connectivity/NetStateUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/connectivity/NetStateUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/connectivity/performing-network-operations/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/connectivity/performing-network-operations/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/connectivity/performing-network-operations/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/connectivity/performing-network-operations/Request/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/connectivity/performing-network-operations/Request/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/connectivity/performing-network-operations/Request/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/connectivity/performing-network-operations/RequestBuilder/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/connectivity/performing-network-operations/RequestBuilder/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/connectivity/performing-network-operations/RequestBuilder/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/connectivity/performing-network-operations/ResponseLiveData/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/connectivity/performing-network-operations/ResponseLiveData/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/connectivity/performing-network-operations/ResponseLiveData/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/extension/ClassExtension/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/extension/ClassExtension/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/extension/ClassExtension/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/hardware/MapUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/hardware/MapUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/hardware/MapUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/images/BmpUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/images/BmpUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/images/BmpUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/images/QRCodeUtil/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/images/QRCodeUtil/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/images/QRCodeUtil/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/images/ShapeAndStateUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/images/ShapeAndStateUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/images/ShapeAndStateUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/information-get/AppUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/information-get/AppUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/information-get/AppUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/information-get/DateUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/information-get/DateUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/information-get/DateUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/information-get/ScreenSizeUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/information-get/ScreenSizeUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/information-get/ScreenSizeUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/information-get/SystemUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/information-get/SystemUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/information-get/SystemUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/ui/DownloadCircleView/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/ui/DownloadCircleView/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/ui/DownloadCircleView/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/ui/FocusedTextView/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/ui/FocusedTextView/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/ui/FocusedTextView/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/ui/FragmentAdapter/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/ui/FragmentAdapter/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/ui/FragmentAdapter/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/documents/VastTools/core-topics/ui/ToastUtils/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/documents/VastTools/core-topics/ui/ToastUtils/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/documents/VastTools/core-topics/ui/ToastUtils/"/>
+         
+    </url>
+    <url>
+         <loc>https://github.com/Android-Vast-Extension/Website/license/LICENSE/</loc>
+         <lastmod>2023-03-07</lastmod>
+         <changefreq>daily</changefreq>
+         <xhtml:link rel="alternate" hreflang="zh" href="https://github.com/Android-Vast-Extension/Website/zh/license/LICENSE/"/>
+         <xhtml:link rel="alternate" hreflang="en" href="https://github.com/Android-Vast-Extension/Website/en/license/LICENSE/"/>
+         
+    </url>
+</urlset>
